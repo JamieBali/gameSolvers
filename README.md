@@ -1,6 +1,6 @@
 # Game Solvers
 
-Here I will compile a collection of solvers I have produced for online games. These are not optimal solutions, but are functional and sometimes silly.
+Here I will compile a collection of solvers I have produced for online games. These are not necessarily optimal solutions, and there are probably more efficient ways of solving these games, but they are functional (mostly).
 
 ## Colordle Bookmarklet
 
