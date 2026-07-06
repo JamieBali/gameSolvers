@@ -1,8 +1,6 @@
 import pickle
-import numpy as np
 
-
-def find_path(starting_word, ending_word, mapping):
+def find_path(starting_word, ending_word, mapping, reveal=False):
 
     # first confirm both words are in the list
     try:
@@ -34,13 +32,18 @@ def find_path(starting_word, ending_word, mapping):
 
                 if word == ending_word:
                     route.append(word)
-                    return route
-                
+                    if reveal:
+                        return route
+                    else:
+                        return ("The link can be made using " + (len(route)-2) + " word(s)")
+
+                # this is slower, but prevents the items from appearing weirdly in the output as they were when i was using np.copy
                 temp = []
                 for item in route:
                     temp.append(item)
                 temp.append(word)
                 temp_routes.append(temp)
+                
         routes = temp_routes
 
     print("unable to find a route")
@@ -49,4 +52,4 @@ def find_path(starting_word, ending_word, mapping):
 with open('saved_dictionary.pkl', 'rb') as f:
     loaded_dict = pickle.load(f)
 
-print(find_path("find","cat",loaded_dict))
+print(find_path("find","cat",loaded_dict, True))
