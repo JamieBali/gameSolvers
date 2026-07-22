@@ -17,3 +17,5 @@ The linxicon mapper first analyses every combination of valid words in linxicon 
 Processing of the partial list (containing only the valid starting words) was slow to complete, so expect a full list of all valid words would require a substantial amount of processing power.
 
 Current method is able to identify paths accurately, efficiently, and with a low number of steps, though until complete processing is completed, it would be difficult to call this the "best" route.
+
+_Note: As of an update on 20th July, Linxicon is now using a bespoke, closed-source LLM for embeddings, meaning this mapping is no longer accurate._
